@@ -6,6 +6,11 @@ body, html {
     align-items: center;
 }
 
+.contenido {
+    display:flex;
+    justify-content: center;
+}
+
 .fila {
     background-color: pink;
     display:flex;
@@ -14,10 +19,15 @@ body, html {
 .tile {
     width: 100%;
     aspect-ratio: 1/1;
-    background-color: cyan;
+    background-color: rgb(255, 255, 255);
 }
 
 #contenedor {
     width: 500px;
     height: 500px;
+    border: 2px solid black;
+}
+
+#resizeButton {
+    padding: 20px;
 }
