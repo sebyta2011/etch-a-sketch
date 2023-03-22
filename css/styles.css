@@ -1,0 +1,23 @@
+body, html {
+    display: flex;
+    height:100%;
+}
+
+
+#gridContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 200px;
+    height:200px;
+}
+
+.gridTile {
+    display: flex;
+    flex-wrap: wrap;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border: 2px solid black;
+    margin: 2px;
+}
