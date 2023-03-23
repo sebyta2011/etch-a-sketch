@@ -6,9 +6,14 @@ body, html {
     align-items: center;
 }
 
+h1 {
+    display:flex;
+    justify-content: center;
+}
 .contenido {
     display:flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .fila {

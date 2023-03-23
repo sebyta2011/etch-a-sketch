@@ -1,3 +1,4 @@
+//First grid
 const contenedor = document.querySelector("#contenedor");
 const crearDiv = document.createElement('div');
 
@@ -7,7 +8,7 @@ function grid() {
         const crearContenedor = document.createElement("div");
         crearContenedor.classList.add('fila');
         contenedor.appendChild(crearContenedor);
-            for(b=0; b < i; b++) {
+            for(d=0; d < i; d++) {
                 const crearDiv = document.createElement('div')
                 crearDiv.classList.add('tile')
                 crearContenedor.appendChild(crearDiv)
@@ -21,9 +22,21 @@ function colorBlack(e) {
 
 grid();
 
+//Black brush
 const gridTiles = document.querySelectorAll(".tile");
 gridTiles.forEach(tile => tile.addEventListener('mouseover', colorBlack));
 
+//Rainbow brush
+function rainbow(e) {
+    const randomBetween = (min, max) => min + Math.floor(Math.random() * max - min + 1);
+const r = randomBetween(0, 255);
+const g = randomBetween(0, 255);
+const b = randomBetween(0, 255);
+let rgb = `rgb(${r},${g},${b})`;
+e.target.style.backgroundColor = rgb;
+}
+
+//Resize page
 const resizeButton = document.querySelector("#resizeButton");
 resizeButton.addEventListener('click', function newGrid() {
     let i = prompt("Desired grid size?");
@@ -33,7 +46,7 @@ resizeButton.addEventListener('click', function newGrid() {
         const crearContenedor = document.createElement("div");
         crearContenedor.classList.add('fila');
         contenedor.appendChild(crearContenedor);
-            for(b=0; b < i; b++) {
+            for(d=0; d < i; d++) {
                 const crearDiv = document.createElement('div')
                 crearDiv.classList.add('tile')
                 crearContenedor.appendChild(crearDiv)
@@ -42,5 +55,3 @@ resizeButton.addEventListener('click', function newGrid() {
     const gridTiles = document.querySelectorAll(".tile");
     gridTiles.forEach(tile => tile.addEventListener('mouseover', colorBlack));
 });
-
-
